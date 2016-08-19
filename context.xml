@@ -1,0 +1,21 @@
+<?xml version='1.0' encoding='utf-8'?>
+<Context>
+    <WatchedResource>WEB-INF/web.xml</WatchedResource>
+    <Manager pathname="" />
+    <Valve className="org.apache.catalina.valves.CometConnectionManagerValve" />
+ <Resource
+        name="jdbc/myoracle"
+        auth="Container"
+        type="javax.sql.DataSource"
+        factory="org.apache.tomcat.jdbc.pool.DataSourceFactory"
+        driverClassName="oracle.jdbc.driver.OracleDriver"
+        url="jdbc:oracle:thin:@127.0.0.1:1521:xe"
+        username="scott"
+        password="tiger"
+        maxActive="4"
+        maxIdle="2"
+        initialSize="4"
+        connectionPoolName="batchsrv_pool"
+        maxWait="-1"/>
+  
+</Context>
